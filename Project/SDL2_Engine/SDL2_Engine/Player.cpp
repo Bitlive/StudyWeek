@@ -1,5 +1,6 @@
 #include <iostream>	///TODO: DELETE
 #include <string>	///TODO: DELETE
+#include <vector>
 
 #pragma region project include
 #include "Player.h"
@@ -8,13 +9,36 @@
 #include "ContentManagement.h"
 #include "Physic.h"
 #include "Renderer.h"
-#include "Time.h"	///TODO: DELETE
+#include "Time.h"
+#include "Vector2.h" ///TODO: DELETE
+#include "Bullet.h"
+#include "World.h"
 #pragma endregion
 
 #pragma region public override function
 // update every frame
 void GPlayer::Update(float _deltaTime)
 {
+	
+	if(SDL_GetMouseState(NULL, NULL) && SDL_BUTTON(SDL_BUTTON_LEFT))
+	{
+		// create textured object
+		GBullet * pBullet = new GBullet(
+			m_position,
+			SVector2(BULLET_WIDTH, BULLET_HEIGHT),
+			CEngine::Get()->GetRenderer(),
+			"Texture/Character/Player/T_Samus_Idle.png");
+
+		pBullet->SetSpeed(BULLET_SPEED);
+		pBullet->SetColType(ECollisionType::NONE);
+
+		// add player to persistant list
+		CEngine::Get()->GetCM()->AddSceneObject(pBullet);
+		
+	
+
+	}
+
 	// movement left
 	if (CInput::GetKey(SDL_SCANCODE_A))
 	{

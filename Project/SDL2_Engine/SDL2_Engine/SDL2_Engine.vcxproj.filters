@@ -44,6 +44,12 @@
     <ClCompile Include="Time.cpp">
       <Filter>Engine\Time</Filter>
     </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Game\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>Game\Bullet</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Engine">
@@ -96,6 +102,12 @@
     </Filter>
     <Filter Include="Engine\Time">
       <UniqueIdentifier>{867bee15-8b50-4c5d-a022-86394f6dce94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Enemy">
+      <UniqueIdentifier>{2b998c78-f5e7-4efd-9232-3f1afa023884}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Bullet">
+      <UniqueIdentifier>{c4e67706-78b1-4524-873d-1ed7e5269cd9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -158,6 +170,12 @@
     </ClInclude>
     <ClInclude Include="Time.h">
       <Filter>Engine\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Game\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>Game\Bullet</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
